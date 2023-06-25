@@ -277,7 +277,7 @@ button:hover {
 // ]]></script>
 <div class="hero">
 <div class="heroText">
-<h1>Eze Ryders Rentals</h1>
+<h1>See More of San Diego in Less Time</h1>
 </div>
 </div>
 <div class="welcomeText">
@@ -301,19 +301,26 @@ button:hover {
 </div>
 <div class="deliveries">
 <h2>Delivery Service</h2>
-<div><img src="https://cdn.shopify.com/s/files/1/0518/3714/1186/files/rental_delivery_map_480x480.jpg?v=1682247130" alt="rental delivery map" />
+<div>
+<img src="https://cdn.shopify.com/s/files/1/0518/3714/1186/files/rental_delivery_map_480x480.jpg?v=1682247130" alt="rental delivery map">
 <p>The price shown shows what the cost is for delivery, the same price will apply to pickup as well. Call for more info or any Special Offers!</p>
 </div>
 </div>
 <div class="reviews">
 <h2>What People are Saying</h2>
 <div>
-<div class="rating"><span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span></div>
+<div class="rating">
+<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>
+</div>
 <p>"Best way to see all the beautiful sites around San Diego. Staff was amazing at showing the best routes and trails. Highly recommend. Do it. It's worth it!"</p>
 <h4>- T.F. Maxman</h4>
 </div>
 </div>
 <div class="callToAction">
 <h2>Book Your Adventure Today!</h2>
-<div class="actions"><a href="https://www.peek.com/s/e5748004-e94e-4f48-9be4-726903916396/bEqd9" class="peek-book-btn-blue peek-book-button-flat peek-book-button-size-lg" data-button-text="Book Now">Book Now</a></div>
+<div class="actions">
+<a href="https://book.peek.com/s/e5748004-e94e-4f48-9be4-726903916396/bEqd9">
+<button>Book a Rental</button>
+</a>
+</div>
 </div>

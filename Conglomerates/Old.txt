@@ -1,0 +1,110 @@
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style><!--
+.collapsible {
+  background-color: #FF7F50;
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  width: 250px;
+  height: 75px;
+  border: white;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.collapsible button{
+  display: inline-block;
+  margin: 5px;
+}
+
+.active, .collapsible:hover {
+  background-color: #FAC898;
+}
+
+.content {
+  text-align: center;
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease-out;
+  background-color: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+--></style>
+<h2 style="font-family: Helvetica; text-align: left;"><strong><img src="https://cdn.shopify.com/s/files/1/0518/3714/1186/files/Screen_Shot_2022-07-22_at_2.28.10_PM_480x480.png?v=1658525301" alt="" width="537" height="264" /></strong></h2>
+<h2 style="font-family: Helvetica; text-align: left;"><strong></strong></h2>
+<h2 style="font-family: Helvetica; text-align: left;"><strong>Eze Ryders: The Premier E-Bike Shop in San Diego</strong></h2>
+<button class="collapsible">What Makes Us Unique?</button>
+<div class="content">
+<h3>Our Business Model:</h3>
+<p style="text-indent: 25px;">At Eze Ryders, we're not just here to rent you a bike. We're here to enhance your experience. With our in-depth knowledge of the area, we'll guide you towards the best routes and hidden gems, ensuring you have an unforgettable time exploring our famous San Diego beaches. Get ready to soak up the sun, feel the ocean breeze, and create lifelong memories with Eze Ryders. Book your electric bike rental today and embark on an extraordinary adventure along the stunning San Diego coastline.</p>
+<h4>Our Brand:</h4>
+<p style="text-indent: 25px;">Discover the breathtaking beauty of San Diego's beaches on one of our own Coastal Cruiser brand E-Bikes! Coastal Cruisers combine style and comfort, allowing you to effortlessly explore our stunning coastal landscapes. Whether you're craving a leisurely ride along the shores of Point Loma or an adventurous journey to the iconic La Jolla, we've got the perfect bike for you.</p>
+<h3>We have an unrelenting comittment to quality and reliability.</h3>
+</div>
+<h4 style="font-family: 'Helvetica';"></h4>
+<h4 style="font-family: 'Helvetica';">Our Staff's Favorite Routes:</h4>
+<p style="font-family: 'Helvetica';">A curated list of the most unforgettable routes in all of San Diego!</p>
+<button class="collapsible">Mission Bay</button>
+<div class="content"><iframe src="https://www.google.com/maps/d/embed?mid=1MnmhSjFpfGeSe3re0ZpS-OWT5CrouAw&amp;ehbc=2E312F" width="350" height="350"></iframe></div>
+<button class="collapsible">Cabrillo National Monument</button>
+<div class="content"><iframe src="https://www.google.com/maps/d/embed?mid=1kOVBEqDabMLdpd3gfMmJPTohv2WzArQ&amp;ehbc=2E312F" width="350" height="350"></iframe></div>
+<button class="collapsible">Downtown</button>
+<div class="content"><iframe src="https://www.google.com/maps/d/embed?mid=1pSngYoAgwptdKtKefZN98izJnkmCigo&amp;ehbc=2E312F" width="350" height="350"></iframe></div>
+<script>// <![CDATA[
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+// ]]></script>
+------------------------------------------------------------------------------------------------------
+<h1 style="text-align: center;"><img src="https://cdn.shopify.com/s/files/1/0518/3714/1186/files/DSC_9149_480x480.jpg?v=1684452642" alt="" /></h1>
+<style><!--
+.title {
+            text-align: center;
+        }
+        .info {
+            text-indent: 25px;
+            margin-left: 25px;
+        }
+        .answer_title {
+            text-align: left;
+            margin-left: 50px;
+        }
+        .answer_body {
+            text-align: left;
+            margin-left: 75px;
+        }
+--></style>
+<h1 class="title">Experience the Thrill of Riding Together with Eze Ryders!</h1>
+<p class="info">Looking for an electrifying group adventure that combines the freedom of riding with the beauty of the coast? Look no further! Eze Ryders is here to turn your regular outing into an unforgettable e-bike experience. Introducing Coastal Cruiser - Your Perfect Companion for Endless Fun!</p>
+<p class="info">Say hello to the Coastal Cruiser, our top-of-the-line Electric Bike designed to make your group rides a breeze. With its sleek design, powerful motor, and long-lasting battery, the Coastal Cruiser will take you on an exhilarating journey along the picturesque coastal and beachfront routes. Whether you're exploring gorgeous natural trails, cruising through the charming beach towns of San Diego, or taking in the breathtaking ocean views, this electric bike will elevate your adventure to new heights.</p>
+<h2 class="title">Why Choose EZE Ryders Electric Bike Rentals for Your Group Adventure?</h2>
+<h4 class="answer_title">-Thrilling Group Experiences</h4>
+<p class="answer_body">Get your friends, family, or colleagues together and embark on a thrilling group ride like no other. Our Coastal Cruiser E-Bike rentals are perfect for team-building outings, family reunions, or simply having a great time with your loved ones.</p>
+<h4 class="answer_title">-Premium E-Bikes:</h4>
+<p class="answer_body">At EZE Ryders, we believe in offering the best. Our e-bikes are meticulously maintained to ensure a safe and smooth ride for everyone. With our Coastal Cruisers, you'll experience the perfect blend of power, style, and comfort.</p>
+<h4 class="answer_title">-Coastal Charm:</h4>
+<p class="answer_body">Let the coastal breeze sweep through your hair as you pedal along the stunning shoreline. Our group rides will take you to hidden gems and scenic spots that will leave you breathless. Uncover the beauty of the coast with EZE Ryders.</p>
+<h4 class="answer_title">-Flexible Rental Options:</h4>
+<p class="answer_body">We understand that every group has unique needs. That's why we offer flexible rental options to suit your schedule. Whether you need a few hours of adventure or a full-day excursion, we've got you covered.</p>
+<h4 class="answer_title">-Free Delivery on Group Orders:</h4>
+<p class="answer_body">Can't work pick-up and dropoff into your busy vacation schedule? Sit back and let us handle it, we offer free delivery on bookings worth $150 and more!</p>
+<h2 class="title">Book Your Coastal Cruiser Group Adventure Today!</h2>
+<p class="info">Don't miss out on the chance to create lifelong memories with your group. Grab your friends, colleagues, or loved ones and embark on an e-bike adventure like no other with Eze Ryders. Click the button below to reserve your Coastal Cruisers and get ready for an exciting day of riding, laughter, and coastal exploration!</p>
+<button type="button">Reserve Now and Let the Adventure Begin!</button>
+<h2 style="font-family: Brush Script MT;"><span color="#FF7F50" style="color: #ff7f50;"> Eze Ryders - Coastal Cruisers:</span></h2>
+<p><span color="000">Riding Together. Creating Memories.</span></p>
+<p><span color="000">San Diego EBike Rentals - Ocean Beach Ebike Rentals - Point Loma Ebike Rentals - Ebike Rental Delivery - Group Ebike Rental San Diego</span></p>
