@@ -1,8 +1,15 @@
 /*Design*/
 body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
+section {
+    margin-left: 128px;
+    margin-right: 128px;
+    margin-bottom: 24px;
+    margin-top: 24px;
+}
+
 h1, h2, h3, h4, p, li {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -28,6 +35,7 @@ button:hover {
 #nav ul{
     display: flex;
     justify-content: space-between;
+    list-style: none;
 }
 a{
     text-decoration: none;
@@ -44,15 +52,13 @@ a:hover {
 .hero{
     padding-top: 8px;
     padding-bottom: 8px;
+    margin: 0 auto;
 }
 .heroText{
     color: #FFFFFF;
     font-weight: bold;
-    margin: 24px
 }
-.welcomeText {
-    margin:24px;
-}
+
 .hero-image {    
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/Screenshot_20221213_015433.png");
     background-position: center;
@@ -61,80 +67,95 @@ a:hover {
     height: auto;
     margin: 0px;
 }
-.hero-text {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    line-height: 24px;
-    text-align: left;
-    color:#FFFFFF;
-    align-items:baseline;
-    align-content: center;
-    padding: 288px;  
-}
-.hero-text {
-    text-align: center;
-}
-.hero-text p {
-    padding-bottom: 24px;
-}
-.welcome {
+.welcomeText {
     text-align: center;
 }
 .hero {
     background-color: #DC6243;
 }
-.maps-hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/routes.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: auto;
-    margin: 0px;
-}
-.groups-hero {
-    background-color: #DC6243;
-}
+
 
 /*RENTALS MAIN PAGE*/
 .deliveries {
-    margin-left: 24px;
+    margin: 0 auto;
+    display: flex;
+    margin-left: 128px;
+    margin-right: 128px;
 }
 .deliveries img {
-    max-width: min-content;
-    margin-right:48px;
+    width: 25%;
+    max-height: auto;
 }
-.deliveries div {
-    display: flex;
+.deliveries .text {
+    margin: 0 auto;
+    margin-left: 24px; 
+    
+}
+.deliveries .dropButton {
+    background-color: #DC6243;
+    color: #fff;
+    font-weight: bold;
+    width: auto;
+}
+.deliveries .arrow {
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    margin-left: 8px;
+
 }
 .reviews {
-    margin: 24px;
+    margin: 0 autp;
     line-height: 0x;
 }
-
+.rating {
+    background-color: #fff;
+    border-color: #d4d4d4;
+    padding: 24px;
+    filter: drop-shadow(1px 1px 4px #d4d4d4);
+    border-radius: 16px;
+}
+.rating h4 {
+    line-height: normal;
+    padding-bottom: 0px;
+}
 .checked {
     color: #DC6243;
 }
-.callToAction {
-    margin: 24px;
-}
+
 .actions {
     display:flex;
     justify-content: space-between;
 }
+.heading {
+    margin: 0 auto;
+    margin-top: 48px;
+    margin-left: 128px;
+    margin-right: 128px;
+    
+}
 /*RENTALS GRID*/
 .grid {
     margin: 0 auto;
+    margin-left: 128px;
+    margin-right: 128px;
     margin-top: 24px;
     margin-bottom: 24px;
     display: grid;
     grid-area: grid;
-    grid-template-columns: 48% 48%;
+    grid-template-columns: 50% 50%;
     grid-template-rows: max-content;
-    grid-gap: 16px;
+    grid-gap: 24px;
     grid-template-areas: 
     "card1 card2" 
     "card3 card4";
     justify-content: center;
     align-items: flex-start;
+}
+.grid h4{
+    line-height: normal;
 }
 .grid button {
     margin-top: 8px;
@@ -145,12 +166,18 @@ a:hover {
 #card2 {
     grid-area: card2;
 }
+#card2 img {
+    filter: brightness(.9);
+}
 #card3 {
     grid-area: card3;
 }
 #card4 {
     grid-area: card4;
-}   
+} 
+#card4 img {
+    filter: brightness(.9);
+}  
 
 /*Grid Cards*/
 #card1, #card2, #card3, #card4 {
@@ -159,14 +186,13 @@ a:hover {
     display: block;
     text-align: center;
     justify-items: center;
-    width: auto;
     padding: 16px;
     filter: drop-shadow(1px 1px 4px #d4d4d4);
 }
 img {
     border-radius: 8px;
     width: 100%;
-    height: 400px;
+    height: 300px;
 }
 
 /*Drop Downs*/
@@ -205,8 +231,8 @@ img {
     display: block;
     text-align: start;
     justify-content: start;
-    width: 400px;
     margin-top: 8px;
+    width: 100%;
 }
 .dropdownContent {
     display: none;
@@ -225,8 +251,8 @@ img {
     justify-content: center;
     text-align: center;
     align-items: flex-start;
-    gap:24px;
-    margin: 24px;  
+    gap: 24px;
+    
 }
 .container .subContainer {
     justify-content: center;
@@ -236,18 +262,19 @@ img {
     padding: 16px;
     border-radius: 16px;
     filter: drop-shadow(1px 1px 4px #d4d4d4);
-    width: 1fr;
-    height: 100%;
+    width: 100%;
+    height: 100%
 }
 .container img {
-    width: 400px;
-    height: 300px;
+    width: 100%;
+    height: 250px;
 }
 .container .dropButton {
     width: 100%;
     background-color: #DC6243;
     color: #FFFFFF;
     font-weight: bold;
+    border-color: #DC6243;
 }
 .container .arrow {
     border: solid #ffffff;
@@ -259,26 +286,61 @@ img {
 }
 
 /*MOBILE VIEW*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
     .body {
-        margin: 8px;
+        margin: 0 auto;
+    }
+    section {
+        margin: 24px;
+        display: flex;
+        flex-direction: column;
     }
     .grid {
         margin: 8px;
         display:flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: auto;
     }
     .container {
         display:flex;
         flex-direction: column;
+        column-width: 30%;
+        margin: 8px;
         justify-content: center;
+        align-items: center;
     }
     .container .subContainer {
-        margin-top: 16px;
+        margin-top: 8px;
+        width: 85%
+    }
+    .deliveries {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        text-align: start;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .deliveries .text {
+        margin: 0 auto;
+        margin-right: 24px;
+        width: auto;
+        padding-right: 24px;
+        padding-left: 0px;
+    }
+    .deliveries img{
+        width: auto;
+        max-height: auto;
+    }
+    img {
+        width: 400px;
+        height: 300px;
+    }
+    .heading: {
+        margin-left: 24px;
+        margin-right: 24px;
     }
 }
-
-
-
-
-
