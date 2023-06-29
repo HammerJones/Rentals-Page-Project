@@ -58,15 +58,6 @@ a:hover {
     color: #FFFFFF;
     font-weight: bold;
 }
-
-.hero-image {    
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/Screenshot_20221213_015433.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: auto;
-    margin: 0px;
-}
 .welcomeText {
     text-align: center;
 }
@@ -339,7 +330,7 @@ img {
         width: 400px;
         height: 300px;
     }
-    .heading: {
+    .heading {
         margin-left: 24px;
         margin-right: 24px;
     }
