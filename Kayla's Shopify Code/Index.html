@@ -63,50 +63,37 @@
             padding-top: 8px;
             padding-bottom: 8px;
             margin: 0 auto;
+            margin-bottom: 48px;
         }
         .heroText{
             color: #FFFFFF;
             font-weight: bold;
-        }
-        .welcomeText {
-            text-align: center;
         }
         .hero {
             background-color: #DC6243;
         }
 
 
-        /*RENTALS MAIN PAGE*/
+        /*Deliveries*/
         .deliveries {
             display: flex;
-            margin-left: 128px;
-            margin-right: 128px;
+            margin-left: 48px;
+            margin-right: 48px;
             flex-direction: row;
+            text-align: left;
+            gap: 48px;
+            
         }
         .deliveries img {
-            width: 25%;
-            max-height: auto;
             border-radius: 8px;
+            width: 100%;
+            height:auto;
         }
-        .deliveries .text {
-            margin: 0 auto;
-            margin-left: 24px; 
+        .deliveries button {
+            margin-top: 24px;
         }
-        .deliveries .dropButton {
-            background-color: #DC6243;
-            color: #fff;
-            font-weight: bold;
-            width: auto;
-        }
-        .deliveries .arrow {
-            border: solid #ffffff;
-            border-width: 0 2px 2px 0;
-            display: inline-block;
-            padding: 3px;
-            transform: rotate(-45deg);
-            margin-left: 8px;
-
-        }
+       
+        /*Review*/
         .reviews {
             margin: 0 autp;
             line-height: 0x;
@@ -154,7 +141,7 @@
             grid-area: grid;
             grid-template-columns: 50% 50%;
             grid-template-rows: max-content;
-            grid-gap: 48px;
+            grid-gap: 24px;
             grid-template-areas: 
             "card1 card2" 
             "card3 card4";
@@ -193,7 +180,9 @@
             display: block;
             text-align: center;
             justify-items: center;
-            padding: 16px;
+            padding-left: 48px;
+            padding-right: 48px;
+            padding-bottom: 24px;
             filter: drop-shadow(1px 1px 4px #d4d4d4);
         }
         .grid img {
@@ -248,13 +237,6 @@
         }
         .dropdownContent {
             display: none;
-        }
-        /*Group Rentals*/
-        .whyEze {
-            margin: 24px;
-        }
-        .callToAction {
-            margin: 24px;
         }
 
         /*Flexbox Containers*/
@@ -389,10 +371,11 @@
 <body>
     <section id="nav">
         <ul>
-            <li><a href="Index.html">Rent Eze Ryders</a></li>
+            <li><a href="Index.html"><u>Rent With Eze Ryders</u></a></li>
             <li><a href="Rentals.html">Book Rentals</a></li>
            <li><a href="Maps_Routes.html">Maps & Routes</a></li>
            <li><a href="Group_Rentals.html">Group Rentals</a></li>
+           <li><a href="Delivery.html">Delivery Service</a></li>
         </ul>
     </section>
     
@@ -481,14 +464,18 @@
         </div>   
     </section>
 
-    <section class="deliveries">
-        <img src="images/rental_delivery_map_480x480.webp">
-        <div class="text"> 
-            <h2>Rental Delivery Service</h2>   
-            <p>Can't work pick-up and dropoff into your busy vacation schedule? Sit back and let us handle it.</p> 
-            <p>Our delivery service is priced according to the Rental Delivery Area Map.</p> 
-            <p>We offer free delivery service for bookings that cost $150 or more.</p>
-            <button>Book a Rental</button>
+    <section class="heading">
+        <h2>Bike Rentals Delivered Right to Your Doorstep</h2>
+    </section>
+    
+    <section>
+        <div class="deliveries">
+            <img src="images/rental_delivery_map_480x480.webp">
+            <div class="text">   
+                <p>Can't work pick-up and drop-off into your busy vacation schedule? Sit back and let us handle it. We offer a convenient and hassle-free service to deliver your bike rentals right to your doorstep so you can embark on your unforgettable adventure effortlessly. </p> 
+                <p>View the Rental Delivery Map to estimate the cost of delivery to your area. We offer a free delivery service for bookings that cost $150 or more.</p> 
+                <button>Book a Rental</button>
+            </div> 
         </div>
     </section>
     
