@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rentals Home</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style>
+		/*Design*/
+        body {
+            margin: 0 auto;
+            padding: 0;
+        }
+        section {
+            margin-left: 128px;
+            margin-right: 128px;
+            margin-bottom: 24px;
+            margin-top: 24px;
+        }
+
+        h1, h2, h3, h4, p, li {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        button {
+            background-color: #DC6243;
+            padding: 16px 32px;
+            font-weight: bold;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #FFFFFF;
+            border-radius: 8px;
+        }
+        button:hover {
+            font-weight: bolder;
+        }
+
+        /*temp navbar*/
+        #nav {
+            background-color: #000000;
+            margin: 0 auto;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            padding-left: 128px;
+            padding-right: 128px;
+        }
+        #nav ul{
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            list-style: none;
+            color: #DC6243;
+            font-weight: bold;
+        }
+        a:hover {
+            font-weight: bolder;
+            text-decoration: underline;
+        }
+
+        /*HEROS*/
+        .hero{
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin: 0 auto;
+        }
+        .heroText{
+            color: #FFFFFF;
+            font-weight: bold;
+        }
+        .welcomeText {
+            text-align: center;
+        }
+        .hero {
+            background-color: #DC6243;
+        }
+
+
+        /*RENTALS MAIN PAGE*/
+        .deliveries {
+            display: flex;
+            margin-left: 128px;
+            margin-right: 128px;
+            flex-direction: row;
+        }
+        .deliveries img {
+            width: 25%;
+            max-height: auto;
+            border-radius: 8px;
+        }
+        .deliveries .text {
+            margin: 0 auto;
+            margin-left: 24px; 
+        }
+        .deliveries .dropButton {
+            background-color: #DC6243;
+            color: #fff;
+            font-weight: bold;
+            width: auto;
+        }
+        .deliveries .arrow {
+            border: solid #ffffff;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(-45deg);
+            margin-left: 8px;
+
+        }
+        .reviews {
+            margin: 0 autp;
+            line-height: 0x;
+        }
+        .rating {
+            background-color: #fff;
+            border-color: #d4d4d4;
+            padding: 24px;
+            filter: drop-shadow(1px 1px 4px #d4d4d4);
+            border-radius: 16px;
+        }
+        .rating h4 {
+            line-height: 0%;
+            padding-bottom: 0px;
+        }
+        .nameDate {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            line-height: 0%;
+        }
+        .checked {
+            color: #DC6243;
+        }
+
+        .actions {
+            display:flex;
+            justify-content: space-between;
+        }
+        .heading {
+            margin: 0 auto;
+            margin-top: 48px;
+            margin-left: 128px;
+            margin-right: 128px;
+            
+        }
+        /*RENTALS GRID*/
+        .grid {
+            margin: 0 auto;
+            margin-left: 176px;
+            margin-right: 176px;
+            margin-top: 24px;
+            margin-bottom: 48px;
+            display: grid;
+            grid-area: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: max-content;
+            grid-gap: 48px;
+            grid-template-areas: 
+            "card1 card2" 
+            "card3 card4";
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .grid h4{
+            line-height: normal;
+        }
+        .grid button {
+            margin-top: 8px;
+        }
+        #card1 {
+            grid-area: card1;
+        }
+        #card2 {
+            grid-area: card2;
+        }
+        #card2 img {
+            filter: brightness(.9);
+        }
+        #card3 {
+            grid-area: card3;
+        }
+        #card4 {
+            grid-area: card4;
+        } 
+        #card4 img {
+            filter: brightness(.9);
+        }  
+
+        /*Grid Cards*/
+        #card1, #card2, #card3, #card4 {
+            background-color: #ffffff;
+            border-radius: 16px;
+            display: block;
+            text-align: center;
+            justify-items: center;
+            padding: 16px;
+            filter: drop-shadow(1px 1px 4px #d4d4d4);
+        }
+        .grid img {
+            border-radius: 8px;
+            width: 100%;
+            height: 300px;
+        }
+        .flex-container img {
+            border-radius: 8px;
+            width: 100%;
+            height: 300px;
+        }
+
+        /*Drop Downs*/
+        .dropButton {
+            background-color: #fff;
+            color: black;
+            width: 100%;
+            font-weight: normal;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-top: 8px;
+            border-color: #d4d4d4;
+        }
+        .arrow {
+            border: solid black;
+            border-width: 0 1px 1px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(-45deg);
+            margin-left: 8px;
+        }        
+        .dropdown {
+            display: block;
+            justify-content: center;
+            max-height: min-content;
+            margin: 0 auto;
+        }
+        .dropdown:hover .dropButton {
+            font-weight: bold;
+        }
+        .dropdown:hover .dropButton .arrow {
+            transform: rotate(45deg);
+            margin-bottom: 2px;
+            border-width: 0 2px 2px 0;
+        }
+        .dropdown:hover .dropdownContent {
+            display: block;
+            text-align: start;
+            justify-content: start;
+            margin-top: 8px;
+            width: 100%;
+        }
+        .dropdownContent {
+            display: none;
+        }
+        /*Group Rentals*/
+        .whyEze {
+            margin: 24px;
+        }
+        .callToAction {
+            margin: 24px;
+        }
+
+        /*Flexbox Containers*/
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: flex-start;
+            gap: 24px;
+            
+        }
+        .flex-container .subContainer {
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+            background-color: #fff;
+            padding: 16px;
+            border-radius: 16px;
+            filter: drop-shadow(1px 1px 4px #d4d4d4);
+            width: 100%;
+            height: 100%
+        }
+        .flex-container img {
+            width: 100%;
+            height: 250px;
+        }
+        #icon{
+            width: 60px;
+            height: 60px;
+        }
+        .flex-container .dropButton {
+            width: 100%;
+            background-color: #DC6243;
+            color: #FFFFFF;
+            font-weight: bold;
+            border-color: #DC6243;
+        }
+        .flex-container .arrow {
+            border: solid #ffffff;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(-45deg);
+            margin-left: 8px;
+        }
+
+        /*MOBILE VIEW*/
+        @media only screen and (max-width: 1000px) {
+            .body {
+                margin: 0 auto;
+            }
+            section {
+                margin: 24px;
+                display: flex;
+                flex-direction: column;
+            }
+            .hero {
+                padding:8px;
+            }
+            .grid {
+                margin: 0 auto;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                grid-template-columns: auto;
+            }
+            .flex-container {
+                display:flex;
+                flex-direction: column;
+                column-width: 30%;
+                margin: 8px;
+                justify-content: center;
+                align-items: center;
+            }
+            .flex-container .subContainer {
+                margin-top: 8px;
+                width: 85%
+            }
+            .deliveries {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                text-align: start;
+                flex-wrap: wrap;
+                width: 100%;
+                margin: 24px;
+            }
+            .deliveries .text {
+                margin: 0px;
+                max-width: 400px;
+            }
+            .deliveries img{
+                width: 400px;
+                max-height: auto;
+                display: block;
+                justify-content: center;
+                border-radius: 8px;
+            }
+            .grid img {
+                width: 400px;
+                height: 300px;
+            }
+            .flex-container img {
+                width: 400px;
+                height: 300px;
+            }
+            .heading {
+                margin-left: 24px;
+                margin-right: 24px;
+            }
+        }
+	</style>
+    <script type="text/javascript">
+        (function(config) {
+          window._peekConfig = config || {};
+          var idPrefix = 'peek-book-button';
+          var id = idPrefix+'-js'; if (document.getElementById(id)) return;
+          var head = document.getElementsByTagName('head')[0];
+          var el = document.createElement('script'); el.id = id;
+          var date = new Date; var stamp = date.getMonth()+"-"+date.getDate();
+          var basePath = "https://js.peek.com";
+          el.src = basePath + "/widget_button.js?ts="+stamp;
+          head.appendChild(el); id = idPrefix+'-css'; el = document.createElement('link'); el.id = id;
+          el.href = basePath + "/widget_button.css?ts="+stamp;
+          el.rel="stylesheet"; el.type="text/css"; head.appendChild(el);
+        })({key: 'e5748004-e94e-4f48-9be4-726903916396'});
+      </script>
+</head>
+
+<body>
+    <section id="nav">
+        <ul>
+            <li><a href="Index.html">Rent Eze Ryders</a></li>
+            <li><a href="Rentals.html">Book Rentals</a></li>
+           <li><a href="Maps_Routes.html">Maps & Routes</a></li>
+           <li><a href="Group_Rentals.html">Group Rentals</a></li>
+        </ul>
+    </section>
+    
+    <div class="hero">
+        <section class="heroText">
+            <h2>Experience the best of San Diego with Eze Ryders</h2>
+        </section>
+    </div>
+
+    <div class="heading">
+        <p>Eze Ryders is San Diego's premier electric-bike rental service. Discover the city's stunning scenery and bike-friendly routes on our high-quality beach cruisers, mountain bikes, road bikes, and electric bikes. Our seamless rental process and convenient delivery service make exploring the city a breeze.</p>
+    </div>
+
+    <div class="heading">
+        <h2>Book Your Adventure Today!</h2>
+    </div>
+
+    <section class="grid">
+        <div id="card1">
+           <h3>Electric Beach Cruiser Rentals</h3>
+           <img src="images/beach cruiser.jpg">
+           <div class="dropdown">
+              <button class="dropButton">Learn More<i class="arrow right"></i></button>
+              <div class="dropdownContent">
+                 <h4>500w Coastal Cruiser Premium Electric Beach Cruiser</h4>
+                 <p>Explore San Diego in style on a 500w Coastal Cruiser electric beach cruiser! This bike has both throttle and pedal assist.</p>
+                 <h4>Rental Pricing</h4>
+                 <ul>
+                    <li>Half Day (4 Hours) - $65</li>
+                    <li>Full Day (24 Hours) - $85</li>
+                 </ul>
+              </div>
+              <button>Book Now</button>
+           </div>
+        </div>    
+        <div id="card2">
+           <h3>Electric Road Bike Rentals</h3>
+           <img src="images/fat tire.jpg">
+           <div class="dropdown">
+              <button class="dropButton">Learn More<i class="arrow right"></i></button>
+              <div class="dropdownContent">
+                 <h4>750w Escape Fat Tire Electric Bike</h4>
+                 <p>Explore San Diego on a 750w Himiway Escape - a powerful moped style electric bike!</p>
+                 <h4>Rental Pricing</h4>
+                 <ul>
+                    <li>Half Day (4 Hours) - $65</li>
+                    <li>Full Day (24 Hours) - $85</li>
+                 </ul>
+              </div>
+              <button>Book Now</button>
+           </div>
+        </div>   
+        <div id="card3">
+           <h3>Electric Moped Rentals</h3>
+           <img src="images/segway.jpg">
+           <div class="dropdown">
+              <button class="dropButton">Learn More<i class="arrow right"></i></button>
+              <div class="dropdownContent">
+                 <h4>Segway C80 Electric Moped</h4>
+                 <p>Explore San Diego on a 20 MPH electric moped!</p>
+                 <h4>Rental Pricing</h4>
+                 <ul>
+                    <li>Half Day (4 Hours) - $65</li>
+                    <li>Full Day (24 Hours) - $85</li>
+                 </ul>
+              </div>
+              <button>Book Now</button>
+           </div>
+        </div>   
+        <div id="card4">
+           <h3>Electric Mountian Bike Rentals</h3>
+           <img src="images/mountain biker.jpeg">
+           <div class="dropdown">
+              <button class="dropButton">Learn More<i class="arrow right"></i></button>
+              <div class="dropdownContent">
+                 <h4>750w All Terrain Full-Suspension Fat Tire Mountain Bike - Himiway Cobra</h4>
+                 <p>This bike is a BEAST. The 750w Full Suspension Fat Tire Himiway Cobra gives you 60-80 miles in range and sports super big 26x4.8 inch tires that can tackle any terrain. Great for riding on roads as well! Especially awesome for larger riders 6ft and taller.</p>
+                 <h4>Rental Pricing</h4>
+                 <ul>
+                    <li>Half Day (4 Hours) - $65</li>
+                    <li>Full Day (24 Hours) - $85</li>
+                 </ul>
+              </div>
+              <button>Book Now</button>
+           </div>
+        </div>   
+    </section>
+
+    <section class="deliveries">
+        <img src="images/rental_delivery_map_480x480.webp">
+        <div class="text"> 
+            <h2>Rental Delivery Service</h2>   
+            <p>Can't work pick-up and dropoff into your busy vacation schedule? Sit back and let us handle it.</p> 
+            <p>Our delivery service is priced according to the Rental Delivery Area Map.</p> 
+            <p>We offer free delivery service for bookings that cost $150 or more.</p>
+            <button>Book a Rental</button>
+        </div>
+    </section>
+    
+    <section class="heading">
+        <h2>What Makes Us Unique</h3>
+    </section>
+    <section class="flex-container">
+        <div class="subContainer">
+            <img src="images/icons/icons8-electric-bike-50.png" id="icon">
+            <h3>Experience</h3>
+            <p>At Eze Ryders, we're not just here to rent you a bike. We're here to guide you towards the best bike routes and hidden gems, ensuring you have an unforgettable time exploring our famous San Diego beaches.</p>
+        </div>
+        <div class="subContainer">
+            <img src="images/icons/icons8-electric-bike-50.png" id="icon">
+            <h3>Our Bikes</h3>
+            <p> Whether you're craving a leisurely ride along the shores of Point Loma or an adventurous journey to the iconic La Jolla, we've got the perfect bike for you. Discover San Diego on one of our own Coastal Cruiser brand E-Bikes!</p>
+        </div>
+        <div class="subContainer">
+            <img src="images/icons/icons8-electric-bike-50.png" id="icon">
+            <h3>Quality</h3>
+            <p>We have an unrelenting comittment to quality and reliability. You can enjoy your adventure with peace of mind knowing that we are committed to promoting eco-friendly and responsible biking practices.</p>
+        </div>   
+    </section>
+    
+    <div class="heading">
+        <h2>What People are Saying</h2>
+    </div>
+    
+    <section class="reviews">
+        <div class="rating">
+            <div>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+            </div>
+            <p>"Best way to see all the beautiful sites around San Diego. Staff was amazing at showing the best routes and trails. Highly recommend. Do it. It's worth it!"</p>
+            <div class="nameDate">
+                <h4>- T.F. Maxman </h4><p><i>(April 2023)</i></p>
+            </div>
+        </div>
+    </section>
+
+    <div class="heading">
+        <h2>Maps & Bike Routes</h2>
+    </div>
+    
+    <section class="flex-container">
+        <div class="subContainer">
+            <h3>Mission Bay</h3>
+            <img src="images/mission bay.jpeg">
+            <div class="dropdown">
+               <button class="dropButton">View Map<i class="arrow right"></i></button>
+               <div class="dropdownContent">
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1MnmhSjFpfGeSe3re0ZpS-OWT5CrouAw&ehbc=2E312F" width="400" height="300"></iframe>
+               </div>
+            </div>   
+        </div>
+        <div class="subContainer">
+            <h3>Cabrillo National Park</h3>
+            <img src="images/cabrillo.jpeg">
+            <div class="dropdown">
+                <button class="dropButton">View Map<i class="arrow right"></i></button>
+                <div class="dropdownContent">
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1MnmhSjFpfGeSe3re0ZpS-OWT5CrouAw&ehbc=2E312F" width="400" height="300"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="subContainer">
+            <h3>Downtown San Diego</h3>
+            <img src="images/dowtown harbor island.jpeg">
+            <div class="dropdown">
+                <button class="dropButton">View Map<i class="arrow right"></i></button>
+                <div class="dropdownContent">
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1MnmhSjFpfGeSe3re0ZpS-OWT5CrouAw&ehbc=2E312F" width="400" height="300"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html> 
