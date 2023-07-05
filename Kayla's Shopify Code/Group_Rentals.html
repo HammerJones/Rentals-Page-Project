@@ -84,13 +84,20 @@
         }
 
         /*Coastal Cruiser*/
-        /*.cruiser div {
+        /*.cruiser ul {
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/beach cruiser.jpg");
             background-repeat: no-repeat;
             border-radius:8px; 
             color:#fff;
             padding: 48px;
-            background-size: contain;
+            background-size: cover;
+            width:100vw;
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            text-align: left;
         }*/
         .cruiser {
             display: flex;
@@ -249,10 +256,15 @@
         <h2>Introducing the Coastal Cruiser</h2>
     </section>
     <section class="cruiser">
+        <!--<ul>
+            <li>Powerful Motor</li>
+            <li>Long-lasting Battery</li>
+            <li>Sleek Design</li>
+        </ul>-->
         <img src="images/beach cruiser.jpg">
         <div>
             <h3>Eze Ryder's Signature E-Bike</h3>
-            <p>The Coastal Cruiser is Eze Ryder’s top-of-the-line electric bike. With its sleek design, powerful motor, and long-lasting battery, you'll experience the perfect blend of power, style, and comfort while effortlessly exploring San Diego’s stunning bike routes.</p>
+            <p>The Coastal Cruiser is Eze Ryder’s top-of-the-line electric bike designed to make your group rides a breeze. Effortlessly explore San Diego’s stunning bike routes with the perfect blend of power, style, and comfort.</p>
             <button>Learn More</button>
         </div>
     </section>
@@ -310,7 +322,7 @@
                 <option value="Full Day">Full Day (24 hours)</option>
             </select>
         </form>
-        <button>Request Reservation</button>
+        <button>RESERVE NOW</button>
     </section>
 </body>
 </html> 
