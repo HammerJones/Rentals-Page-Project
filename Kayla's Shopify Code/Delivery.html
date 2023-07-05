@@ -95,6 +95,30 @@
         button {
             margin-top: 24px;
         }
+        /*Zip Code Form*/
+        .form {
+            background-color: #fff;
+            filter: drop-shadow(1px 1px 4px #d4d4d4);
+            padding: 48px;
+            max-width: fit-content;
+            border-radius: 32px;
+        }
+        input {
+            width: 15%;
+            color: #000;
+            border-radius: 16px;
+            padding: 8px;
+            padding-left: 16px;
+            margin-left: 16px;
+            margin-right: 16px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        input ::placeholder {
+            color:#D4D4D4;
+        }
+        label {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
 
         /*MOBILE VIEW*/
         @media only screen and (max-width: 600px) {
@@ -166,9 +190,13 @@
             <img src="images/rental_delivery_map_480x480.webp">
             <div class="text">   
                 <p>Can't work pick-up and drop-off into your busy vacation schedule? Sit back and let us handle it. We offer a convenient and hassle-free service to deliver your bike rentals right to your doorstep so you can embark on your unforgettable adventure effortlessly. </p> 
-                <p>View the Rental Delivery Map to estimate the cost of delivery to your area. We offer a free delivery service for bookings that cost $150 or more.</p> 
-                <button>Book a Rental</button>
-            </div> 
+                <p>View the Rental Delivery Map to estimate the cost of delivery to your area.<b>We offer a free delivery service for bookings that cost $150 or more.</b></p> 
+                <form>
+                    <label>Estimate Delivery Cost</label>
+                    <input type="text" placeholder="Zip Code">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>  
         </div>
     </section>
 </body>
