@@ -108,6 +108,7 @@
             text-align: center;
             align-items: flex-start;
             gap: 24px;
+            margin-bottom: 48px;
         }
         .flex-container .subContainer {
             justify-content: center;
@@ -134,7 +135,7 @@
             border-radius: 32px;
         }
         input {
-            width: 50%;
+            width: 90%;
             color: #000;
             border-radius: 16px;
             padding: 8px;
@@ -142,18 +143,28 @@
             margin-bottom:8px;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
+        input [type=number] {
+            margin-bottom: 8px;
+        }
         input ::placeholder {
             color:#D4D4D4;
         }
-        input [date] ::placeholder {
+        input [type=date]::placeholder {
             color: #d4d4d4;
+            margin-bottom: 8px;
         }
         select {
             color: #000000;
             border-radius: 16px;
             padding: 8px;
+            padding-left: 16px;
+            padding-right: 16px;
+            margin-top: 8px;
             margin-bottom: 24px;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        select:disabled {
+            color:#D4D4D4;
         }
         label {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -265,8 +276,12 @@
             <p>We understand that every group has unique needs. That's why we offer flexible rental options to suit your schedule.</p>
         </div> 
     </section>
+    <section class="heading">
+        <h2>Reserve Your E-Bike Group Adventure!</h2>
+        <p>Fill out the form below to request a group reservation</p>
+    </section>
     <section class="form">
-        <h2>Reserve Your E-Bike Group Adventure Today!</h2>
+        <h3>Request a Group Reservation</h3>
         <form>
             <label>Name</label>
             <div id="Name">
@@ -280,18 +295,22 @@
             <div id="Email">
                 <input type="email" placeholder="Email Address" Required>
             </div>
+            <label>Group Size</label>
+            <div id="bikeNumber">
+                <input type="number" placeholder="">
+            </div>
             <label>Date of Rental</label>
             <div id="Date">
                 <input type="date" Required>
             </div>
             <label>Length of Rental</label>
             <select id="rental-length">
-                <option value="Half Day"></option>
+                <option><Select:disabled>Select</Select:disabled></option>
                 <option value="Half Day">Half Day (8 hours)</option>
                 <option value="Full Day">Full Day (24 hours)</option>
             </select>
         </form>
-        <button>Book Now</button>
+        <button>Request Reservation</button>
     </section>
 </body>
 </html> 
