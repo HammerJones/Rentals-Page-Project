@@ -35,6 +35,9 @@
         .dropButton:hover {
             filter: brightness(100%);
         }
+        .book {
+            width: 100%;
+        }
 
         /*temp navbar*/
         #nav {
@@ -132,9 +135,7 @@
             display: block;
             text-align: center;
             justify-items: center;
-            padding-left: 48px;
-            padding-right: 48px;
-            padding-bottom: 24px;
+            padding: 24px;
             filter: drop-shadow(1px 1px 4px #d4d4d4);
         }
         .grid img {
@@ -147,7 +148,10 @@
             width: 100%;
             height: 300px;
         }
-
+        .namePrice {
+            display: flex;
+            justify-content: space-between;
+        }
         /*Drop Downs*/
         .dropButton {
             background-color: #fff;
@@ -181,6 +185,13 @@
             border-width: 0 2px 2px 0;
         }
         .dropdown:hover .dropdownContent {
+            display: block;
+            text-align: start;
+            justify-content: start;
+            margin-top: 8px;
+            width: 100%;
+        }
+        .show {
             display: block;
             text-align: start;
             justify-content: start;
@@ -313,7 +324,12 @@
           el.href = basePath + "/widget_button.css?ts="+stamp;
           el.rel="stylesheet"; el.type="text/css"; head.appendChild(el);
         })({key: 'e5748004-e94e-4f48-9be4-726903916396'});
-      </script>
+    </script>
+    <!--<script>
+        function toggleDropdown() {
+            var dropdownContent = document.getElementById("dropdownContent");
+        }
+    </script>-->
 </head>
    <body>
         <section id="nav">
@@ -335,14 +351,17 @@
          <h2>Experience the best of San Diego with Eze Ryders</h2>
            <p>San Diego's premier bike rental service offers top-notch customer service and a wide range of high-quality bikes for exploring the city on your terms. Choose from beach cruisers, mountain bikes, road bikes, and electric bikes to effortlessly discover San Diego's beautiful scenery and bike-friendly routes. Our seamless rental process and convenient delivery service make exploring a breeze. Rest easy knowing that our eco-friendly and responsible biking practices guarantee a worry-free adventure.</p>
       </section>
-
       <div class="grid">
          <div id="card1">
-            <h3>Electric Beach Cruiser Rentals</h3>
             <img src="images/beach cruiser.jpg">
+            <div class="namePrice">
+                <h3>Electric Beach Cruiser Rentals</h3>
+                <p>Starting at $65</p>
+            </div>
+            <button class="book">Book Now</button>
             <div class="dropdown">
-               <button class="dropButton">Learn More<i class="arrow right"></i></button>
-               <div class="dropdownContent">
+               <button class="dropButton" onclick="toggleDropdown ()">Learn More<i class="arrow right"></i></button>
+               <div class="dropdownContent" id="dropdownContent">
                   <h4>500w Coastal Cruiser Premium Electric Beach Cruiser</h4>
                   <p>Explore San Diego in style on a 500w Coastal Cruiser electric beach cruiser! This bike has both throttle and pedal assist.</p>
                   <h4>Rental Pricing</h4>
@@ -351,12 +370,15 @@
                      <li>Full Day (24 Hours) - $85</li>
                   </ul>
                </div>
-               <button>Book Now</button>
             </div>
          </div>    
          <div id="card2">
-            <h3>Electric Road Bike Rentals</h3>
             <img src="images/fat tire.jpg">
+            <div class="namePrice">
+                <h3>Electric Road Bike Rentals</h3>
+                <p>Starting at $65</p>
+            </div>
+            <button class="book">Book Now</button>
             <div class="dropdown">
                <button class="dropButton">Learn More<i class="arrow right"></i></button>
                <div class="dropdownContent">
@@ -367,13 +389,17 @@
                      <li>Half Day (4 Hours) - $65</li>
                      <li>Full Day (24 Hours) - $85</li>
                   </ul>
-               </div>
-               <button>Book Now</button>
+               </div> 
             </div>
          </div>   
          <div id="card3">
-            <h3>Electric Moped Rentals</h3>
+            
             <img src="images/segway.jpg">
+            <div class="namePrice">
+                <h3>Electric Moped Rentals</h3>
+                <p>Starting at $65</p>
+            </div>
+            <button class="book">Book Now</button>
             <div class="dropdown">
                <button class="dropButton">Learn More<i class="arrow right"></i></button>
                <div class="dropdownContent">
@@ -384,13 +410,16 @@
                      <li>Half Day (4 Hours) - $65</li>
                      <li>Full Day (24 Hours) - $85</li>
                   </ul>
-               </div>
-               <button>Book Now</button>
+               </div> 
             </div>
          </div>   
          <div id="card4">
-            <h3>Electric Mountian Bike Rentals</h3>
             <img src="images/mountain biker.jpeg">
+            <div class="namePrice">
+                <h3>Electric Mountian Bike Rentals</h3>
+                <p>Starting at $65</p>
+            </div>
+            <button class="book">Book Now</button>
             <div class="dropdown">
                <button class="dropButton">Learn More<i class="arrow right"></i></button>
                <div class="dropdownContent">
@@ -402,7 +431,6 @@
                      <li>Full Day (24 Hours) - $85</li>
                   </ul>
                </div>
-               <button>Book Now</button>
             </div>
          </div>   
       </div>
