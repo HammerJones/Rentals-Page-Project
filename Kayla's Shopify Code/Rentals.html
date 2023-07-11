@@ -151,6 +151,7 @@
         .namePrice {
             display: flex;
             justify-content: space-between;
+            align-items: center;
         }
         /*Drop Downs*/
         .dropButton {
@@ -173,7 +174,6 @@
         .dropdown {
             display: block;
             justify-content: center;
-            max-height: min-content;
             margin: 0 auto;
         }
         .dropdown:hover .dropButton {
@@ -189,14 +189,6 @@
             text-align: start;
             justify-content: start;
             margin-top: 8px;
-            width: 100%;
-        }
-        .show {
-            display: block;
-            text-align: start;
-            justify-content: start;
-            margin-top: 8px;
-            width: 100%;
         }
         .dropdownContent {
             display: none;
@@ -325,11 +317,12 @@
           el.rel="stylesheet"; el.type="text/css"; head.appendChild(el);
         })({key: 'e5748004-e94e-4f48-9be4-726903916396'});
     </script>
-    <!--<script>
+    <script>
         function toggleDropdown() {
-            var dropdownContent = document.getElementById("dropdownContent");
+            var dropdownContent = document.getElementById("dropContent");
+            dropdownContent.classList.toggle("show");
         }
-    </script>-->
+    </script>
 </head>
    <body>
         <section id="nav">
@@ -361,7 +354,7 @@
             <button class="book">Book Now</button>
             <div class="dropdown">
                <button class="dropButton" onclick="toggleDropdown ()">Learn More<i class="arrow right"></i></button>
-               <div class="dropdownContent" id="dropdownContent">
+               <div class="dropdownContent" id="dropContent">
                   <h4>500w Coastal Cruiser Premium Electric Beach Cruiser</h4>
                   <p>Explore San Diego in style on a 500w Coastal Cruiser electric beach cruiser! This bike has both throttle and pedal assist.</p>
                   <h4>Rental Pricing</h4>
